@@ -1,0 +1,64 @@
+.container {
+  padding: 30px;
+  font-family: 'Segoe UI', sans-serif;
+}
+nav{
+  background-color: rgb(81, 81, 82);
+  width: auto;
+  padding: 10px 30px;
+}
+.search-input {
+  width: 300px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.movie-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.movie-card {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  background-color: black;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+li{
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.movie-desc{
+  width: 70%;
+}
+.movie-image {
+  height: 300px;
+  object-fit: cover;
+  width: 230px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+@media(max-width: 760px){
+  li{
+    margin-top: 0;
+    flex-direction: column;
+  }
+   p{
+font-size: 12px;
+  }
+
+  .movie-image {
+    height: 200px;
+    object-fit: cover;
+    width: 130px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+  }
+}
