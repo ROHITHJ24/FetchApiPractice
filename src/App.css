@@ -1,24 +1,53 @@
+*{
+  /* font-family: san; */
+}
+body{
+  margin: 0;
+  padding: 0;
+}
 .container {
   padding: 30px;
   font-family: 'Segoe UI', sans-serif;
 }
 nav{
-  background-color: rgb(81, 81, 82);
+  background-image: linear-gradient(to bottom right,skyblue, blue);
   width: auto;
-  padding: 10px 30px;
+  padding: 1px 20px;
+}
+
+nav h1{
+  font-size: 30px;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: white;
 }
 .search-input {
-  width: 300px;
+  width: 100px;
   padding: 10px;
   margin-bottom: 20px;
-  border-radius: 8px;
+  border-radius: 15px;
   border: 1px solid #ccc;
   font-size: 16px;
+  outline: 1px solid gray;
+  transition: 0.25s ease-in-out;
+}
+
+.search-input:hover{
+  width: 300px;
 }
 
 .movie-list {
   list-style-type: none;
   padding: 0;
+}
+.no-match-found{
+
+  padding: 40px;
+  background-color: lightgray;
+  border-radius: 10px;
+  color: gray;
+  
 }
 
 .movie-card {
@@ -26,9 +55,17 @@ nav{
   padding: 20px;
   border: 1px solid #eee;
   border-radius: 10px;
-  background-color: black;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  background-color: white;
+  color: black;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+  transition: 0.25s ease-in-out;
 }
+
+.movie-card:hover{
+transform: translatey(-6px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25);
+}
+
 li{
   display: flex;
   gap: 30px;
@@ -48,12 +85,15 @@ li{
 @media(max-width: 760px){
   li{
     margin-top: 0;
-    flex-direction: column;
+    flex-direction: row;
   }
-   p{
-font-size: 12px;
+  nav{
+    text-align: center;
   }
-
+  p{
+    font-size: 12px;
+  }
+  
   .movie-image {
     height: 200px;
     object-fit: cover;
@@ -61,4 +101,17 @@ font-size: 12px;
     border-radius: 4px;
     margin-bottom: 6px;
   }
+}
+
+@media(max-width: 760px){
+  nav{
+    padding: 1px 2px;
+  }
+  nav h1{
+    font-size: 25px;
+  }
+  li{
+  flex-direction: column;
+}
+
 }

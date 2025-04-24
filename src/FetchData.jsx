@@ -17,7 +17,7 @@ const GhibliMovies = () => {
 
   return (
     <>
-    <nav ><h1>GHIBLI STUDIOS </h1></nav>
+    <nav ><h1> GHIBLI STUDIOS </h1></nav>
     <div className="container">
       <h2>Studio Ghibli Movie List</h2>
 
@@ -49,7 +49,7 @@ const GhibliMovies = () => {
             </li>
           ))
         ) : (
-          <p>No movies found 🎥</p>
+          <p className='no-match-found'>No movies found! </p>
         )}
       </ul>
     </div>
